@@ -6,6 +6,7 @@
 
 <style>
 body{
+body{
 margin:0;
 font-family:'Segoe UI',sans-serif;
 background:black;
@@ -14,18 +15,24 @@ text-align:center;
 min-height:100vh;
 width:100%;
 overflow-x:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
 /* ✨ Moving Stars */
 body::before{
 content:"";
-position:absolute;
-width:200%;
-height:200%;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
 background:radial-gradient(white 1px, transparent 1px);
 background-size:40px 40px;
 animation:moveStars 60s linear infinite;
 opacity:0.2;
+z-index:-1;
 }
 
 @keyframes moveStars{
@@ -34,7 +41,10 @@ to{transform:translateY(-500px);}
 }
 
 .container{
-max-width:90%;
+width:100%;
+max-width:500px;
+padding:20px;
+box-sizing:border-box;
 position:relative;
 z-index:2;
 }
@@ -224,6 +234,7 @@ document.getElementById("content").innerHTML="<h1 style='text-shadow:0 0 25px go
 </body>
 
 </html>
+
 
 
 
