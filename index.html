@@ -71,14 +71,34 @@ background:linear-gradient(45deg,#ff0080,#ff4d6d);
 }
 
 @media(max-width:768px){
+
+body{
+height:auto;
+min-height:100vh;
+padding:20px;
+align-items:center;
+}
+
+.container{
+width:100%;
+}
+
+#text{
+font-size:18px;
+min-height:250px;
+}
+
 video{
+position:fixed;
+top:0;
+left:0;
 width:100vw;
 height:100vh;
 object-fit:cover;
-border-radius:0;
+z-index:50;
 }
 
-
+}
 </style>
 </head>
 
@@ -204,3 +224,4 @@ document.getElementById("content").innerHTML="<h1 style='text-shadow:0 0 25px go
 </body>
 
 </html>
+
